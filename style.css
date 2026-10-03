@@ -52,8 +52,8 @@ header {
 
 img.avatar {
   display: block;
-  width: 128px;
-  height: 128px;
+  width: 147px;
+  height: 147px;
   margin: 0 auto var(--space-neutral);
   border-radius: 50%;
   object-fit: cover;
@@ -74,7 +74,7 @@ h1 {
   }
 
   img.avatar {
-    width: 104px;
-    height: 104px;
+    width: 120px;
+    height: 120px;
   }
 }
