@@ -122,6 +122,26 @@ a:visited {
   }
 }
 
+ul.publications {
+  margin: 0 0 var(--space-medium);
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+ul.publications li {
+  margin-bottom: var(--space-small);
+}
+
+ul.publications a {
+  white-space: normal;
+}
+
+ul.publications .venue {
+  color: var(--color-text-subtle);
+}
+
 @media screen and (max-width: 40rem) {
   body {
     padding: var(--space-large) var(--space-neutral);
