@@ -20,6 +20,8 @@
   --space-large: 2rem;
   --space-x-large: 3rem;
   --space-xx-large: 4.5rem;
+
+  --transition: 0.15s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,6 +59,24 @@ header p {
   text-wrap: balance;
 }
 
+/* Intro links act as a table of contents, so they stay quieter than body links */
+header a,
+header a:visited {
+  color: var(--color-text-subtle);
+  text-decoration-color: var(--color-border);
+}
+
+@media (hover: hover) {
+  header a:hover {
+    color: var(--color-accent);
+  }
+}
+
+article {
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
 img.avatar {
   display: block;
   width: 147px;
@@ -74,6 +94,34 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+h2 {
+  margin: var(--space-x-large) 0 var(--space-small);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 var(--space-medium);
+}
+
+a,
+a:visited {
+  color: var(--color-accent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-text);
+  }
+}
+
 @media screen and (max-width: 40rem) {
   body {
     padding: var(--space-large) var(--space-neutral);
@@ -82,6 +130,15 @@ h1 {
 
   header p {
     text-align: left;
+  }
+
+  a,
+  a:visited {
+    white-space: normal;
+  }
+
+  h2 {
+    margin-top: var(--space-large);
   }
 
   img.avatar {
