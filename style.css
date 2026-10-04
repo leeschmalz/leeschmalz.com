@@ -138,7 +138,7 @@ ul.publications a {
   white-space: normal;
 }
 
-ul.publications .venue {
+ul.publications .label {
   color: var(--color-text-subtle);
 }
 
