@@ -192,6 +192,7 @@ table.races td:first-child {
 
   header p {
     text-align: left;
+    text-wrap: wrap;
   }
 
   a,
