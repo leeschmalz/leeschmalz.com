@@ -1,0 +1,8 @@
+[
+  { "date": "2022-11-12", "name": "Eastern Divide", "distance": "50K", "time": "6:40", "place": 33, "finishers": 65, "percentile": 50.77 },
+  { "date": "2023-07-01", "name": "Afton", "distance": "50K", "time": "6:33", "place": 136, "finishers": 233, "percentile": 58.37 },
+  { "date": "2024-04-20", "name": "Trail Mix", "distance": "50K", "time": "5:32", "place": 30, "finishers": 59, "percentile": 50.85 },
+  { "date": "2024-09-28", "name": "UTMB Whistler", "distance": "50K", "time": "7:10:35", "place": 61, "finishers": 232, "percentile": 26.29 },
+  { "date": "2025-05-17", "name": "Superior", "distance": "50K", "time": "6:02:48", "place": 72, "finishers": 226, "percentile": 31.86 },
+  { "date": "2026-08-08", "name": "Big Eddy", "distance": "50K", "time": "5:33:48", "place": 6, "finishers": 30, "percentile": 20.0 }
+]
