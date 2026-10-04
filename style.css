@@ -134,6 +134,11 @@ ul.publications li {
   margin-bottom: var(--space-small);
 }
 
+ul.publications li + li {
+  padding-top: var(--space-small);
+  border-top: 1px solid var(--color-border);
+}
+
 ul.publications a {
   white-space: normal;
 }
