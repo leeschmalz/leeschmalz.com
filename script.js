@@ -1,11 +1,36 @@
-// Keep the publication count in sync with the list
-const count = document.getElementById("publication-count");
-if (count) count.textContent = document.querySelectorAll("ul.publications li").length;
+// Render publications from data/publications.json, grouped by type and newest first
+const publications = document.getElementById("publications-list");
+if (publications) {
+  const typeOrder = ["journal_article", "conference_abstract", "preprint"];
+  const labels = { conference_abstract: "(abstract)", preprint: "(preprint)" };
+  fetch("data/publications.json?v=13")
+    .then((response) => response.json())
+    .then((results) => {
+      results.sort((a, b) => typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type) || b.year - a.year);
+      document.getElementById("publication-count").textContent = results.length;
+      for (const publication of results) {
+        const item = document.createElement("li");
+        const title = document.createElement("i");
+        title.textContent = publication.title;
+        const link = document.createElement("a");
+        link.href = `https://doi.org/${publication.doi}`;
+        link.textContent = `${publication.venue}, ${publication.year}`;
+        item.append(title, document.createElement("br"), link);
+        if (labels[publication.type]) {
+          const label = document.createElement("span");
+          label.className = "label";
+          label.textContent = labels[publication.type];
+          item.append(" ", label);
+        }
+        publications.append(item);
+      }
+    });
+}
 
 // Render race results from data/races.json, newest first, showing hours and minutes only
 const races = document.getElementById("races");
 if (races) {
-  fetch("data/races.json?v=12")
+  fetch("data/races.json?v=13")
     .then((response) => response.json())
     .then((results) => {
       results.sort((a, b) => b.date.localeCompare(a.date));
