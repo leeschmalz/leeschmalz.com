@@ -12,6 +12,7 @@
   --color-border: rgba(var(--rgb-ink), 0.15);
 
   --content-width: 40rem;
+  --header-width: 52rem;
 
   --space-small: 0.5rem;
   --space-medium: 1rem;
@@ -45,9 +46,15 @@ body {
 }
 
 header {
-  max-width: var(--content-width);
+  max-width: var(--header-width);
   margin: 0 auto var(--space-x-large);
   text-align: center;
+}
+
+header p {
+  margin: 0 0 var(--space-medium);
+  color: var(--color-text-subtle);
+  text-wrap: balance;
 }
 
 img.avatar {
@@ -71,6 +78,10 @@ h1 {
   body {
     padding: var(--space-large) var(--space-neutral);
     font-size: 17px;
+  }
+
+  header p {
+    text-align: left;
   }
 
   img.avatar {
