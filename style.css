@@ -12,7 +12,6 @@
   --color-border: rgba(var(--rgb-ink), 0.15);
 
   --content-width: 40rem;
-  --header-width: 52rem;
 
   --space-small: 0.5rem;
   --space-medium: 1rem;
@@ -48,7 +47,7 @@ body {
 }
 
 header {
-  max-width: var(--header-width);
+  max-width: var(--content-width);
   margin: 0 auto var(--space-x-large);
   text-align: center;
 }
