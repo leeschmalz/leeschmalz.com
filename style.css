@@ -155,7 +155,7 @@ table.races {
   width: 100%;
   margin: 0 0 var(--space-medium);
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.45;
   font-variant-numeric: tabular-nums;
 }
