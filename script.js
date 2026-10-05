@@ -3,7 +3,7 @@ const publications = document.getElementById("publications-list");
 if (publications) {
   const typeOrder = ["journal_article", "conference_abstract", "preprint"];
   const labels = { conference_abstract: "(abstract)", preprint: "(preprint)" };
-  fetch("data/publications.json?v=15")
+  fetch("data/publications.json?v=17")
     .then((response) => response.json())
     .then((results) => {
       results.sort((a, b) => typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type) || b.year - a.year);
@@ -30,7 +30,7 @@ if (publications) {
 // Render race results from data/races.json, newest first, showing hours and minutes only
 const races = document.getElementById("races");
 if (races) {
-  fetch("data/races.json?v=15")
+  fetch("data/races.json?v=17")
     .then((response) => response.json())
     .then((results) => {
       results.sort((a, b) => b.date.localeCompare(a.date));
@@ -38,7 +38,7 @@ if (races) {
         const date = new Date(`${race.date}T00:00:00`).toLocaleDateString("en-US", { month: "short", year: "numeric" });
         const time = race.time.split(":").slice(0, 2).join(":");
         const row = races.insertRow();
-        for (const text of [date, `${race.name} ${race.distance}`, time, `Top ${Math.round(race.percentile)}%`]) {
+        for (const text of [date, `${race.name} ${race.distance}`, `${race.city}, ${race.region}`, time, `Top ${Math.round(race.percentile)}%`]) {
           row.insertCell().textContent = text;
         }
       }
