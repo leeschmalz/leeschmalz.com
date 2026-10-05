@@ -56,6 +56,7 @@ header p {
   margin: 0 0 var(--space-medium);
   color: var(--color-text-subtle);
   text-align: left;
+  text-wrap: pretty;
 }
 
 /* Intro links act as a table of contents, so they stay quieter than body links */
@@ -63,6 +64,7 @@ header a,
 header a:visited {
   color: var(--color-text-subtle);
   text-decoration-color: var(--color-border);
+  white-space: normal;
 }
 
 @media (hover: hover) {
